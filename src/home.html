@@ -1,42 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Isuru Dhananjaya</title>
-  <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Professional Website</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Welcome to Isuru website</h1>
-      <p>Your gateway to amazing content</p>
-    </div>
-  </header>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">WebSite</a>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <nav>
-    <div class="container">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <main>
+        <div class="container">
+            <section class="hero fade-in">
+                <h1>Welcome to Our Website</h1>
+                <p>Experience excellence in web design and development. We create stunning, responsive websites that deliver exceptional user experiences and drive results for your business.</p>
+                <a href="/about" class="btn">Learn More About Us</a>
+            </section>
 
-  <main class="container">
-    <section>
-      <h2>Home Page</h2>
-      <p>Welcome to our homepage! This is a demonstration of a simple website built with Node.js and Express.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
-      <p>Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.</p>
-    </section>
-  </main>
+            <section class="content fade-in">
+                <h2>Our Services</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Web Development</h3>
+                        <p>Custom websites built with modern technologies and best practices for optimal performance and user experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Responsive Design</h3>
+                        <p>Beautiful, mobile-first designs that look perfect on all devices and screen sizes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Performance Optimization</h3>
+                        <p>Fast-loading websites optimized for search engines and user engagement.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Digital Solutions</h3>
+                        <p>Comprehensive digital strategies to help your business succeed in the online world.</p>
+                    </div>
+                </div>
+            </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Isuru Dhananjaya. All rights reserved.</p>
-    </div>
-  </footer>
+            <section class="content fade-in">
+                <h2>Why Choose Us?</h2>
+                <p>We are passionate about creating exceptional digital experiences. Our team combines technical expertise with creative vision to deliver websites that not only look amazing but also perform flawlessly.</p>
+                <p>Every project we undertake is approached with meticulous attention to detail, ensuring that your website stands out in today's competitive digital landscape.</p>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="/contact" class="btn">Get Started Today</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Professional Website. All rights reserved. Built with Express.js</p>
+        </div>
+    </footer>
 </body>
 </html>
