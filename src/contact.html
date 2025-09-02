@@ -1,59 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Isuru Dhananjaya</title>
-  <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Professional Website</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Contact Us</h1>
-      <p>We'd love to hear from you</p>
-    </div>
-  </header>
+    <header>
+        <nav class="container">
+            <a href="/" class="logo">WebSite</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <nav>
-    <div class="container">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <main>
+        <div class="container">
+            <section class="content fade-in">
+                <h1>Get In Touch</h1>
+                
+                <p>Ready to start your next project? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
 
-  <main class="container">
-    <section>
-      <h2>Get In Touch</h2>
-      <p>Have questions or feedback? Fill out the form below and we'll get back to you as soon as possible.</p>
-      
-      <form action="/contact" method="POST">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+                <div id="success-message" style="display: none;">
+                    <div class="success-message">
+                        Thank you for your message! We'll get back to you soon.
+                    </div>
+                </div>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Isuru Dhananjaya. All rights reserved.</p>
-    </div>
-  </footer>
+                <form method="POST" action="/contact" style="margin-top: 2rem;">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="How can we help you?">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your project or questions..."></textarea>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                </form>
+
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e1e5e9;">
+                    <h2>Other Ways to Reach Us</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <h3>Email</h3>
+                            <p>hello@website.com<br>We respond within 24 hours</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567<br>Mon-Fri, 9AM-6PM EST</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Office</h3>
+                            <p>123 Business Ave<br>Suite 100, City, State 12345</p>
+                        </div>
+                        <div class="feature-card">
+                            <h3>Response Time</h3>
+                            <p>24 hours or less<br>Priority support available</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Professional Website. All rights reserved. Built with Express.js</p>
+        </div>
+    </footer>
+
+    <script>
+        // Check for success parameter in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            document.getElementById('success-message').style.display = 'block';
+            // Remove the parameter from URL without refreshing
+            const newUrl = window.location.pathname;
+            window.history.replaceState({}, document.title, newUrl);
+        }
+
+        // Add form submission animation
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function() {
+            const submitBtn = form.querySelector('.btn');
+            submitBtn.textContent = 'Sending...';
+            submitBtn.style.opacity = '0.7';
+        });
+    </script>
 </body>
 </html>
