@@ -1,12 +1,23 @@
 {
-  "name": "isuru-Dhananjaya",
+  "name": "express-website",
   "version": "1.0.0",
-  "description": "Basic website with Node.js and Express",
+  "private": true,
+  "description": "A professional website built with Express.js",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^4.18.2"
-  }
+    "express": "^5.1.0"
+  },
+  "keywords": [
+    "express",
+    "website",
+    "html",
+    "css"
+  ],
+  "author": "",
+  "license": "MIT"
 }
